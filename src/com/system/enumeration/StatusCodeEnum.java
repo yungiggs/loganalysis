@@ -5,7 +5,7 @@ package com.system.enumeration;
  */
 public enum StatusCodeEnum {
     SUCCESS("200"),
-    ERROR_PAGE_NOT_FOUND("400"),
+    ERROR_PAGE_NOT_FOUND("404"),
     ERROR_NOT_PARAM("10");
 
     private String value;

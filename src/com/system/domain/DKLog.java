@@ -1,13 +1,39 @@
 package com.system.domain;
 
+import com.system.enumeration.BrowserEnum;
+import com.system.enumeration.StatusCodeEnum;
+
+import java.net.URL;
 import java.text.SimpleDateFormat;
-import java.util.Date;
 
 /**
  * Created by dev.yungiggs on 2016. 10. 21..
  */
 public class DKLog extends Log{
 
+
+    public void setStatusCode(String statusCodeString) {
+
+        super.setStatusCode( StatusCodeEnum.getEnumByValue(statusCodeString));
+    }
+
+    public void setBrower(String  browerString) {
+
+        super.setBrowser( BrowserEnum.getEnumByValue(browerString));
+    }
+
+    public void setUrl(String stringUrl) {
+
+        try{
+
+            URL url = new URL(stringUrl);
+            super.setUrl(url);
+        } catch (Exception e){
+
+
+        }
+
+    }
 
     public void setDate(String dateString) {
 

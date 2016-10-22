@@ -3,7 +3,7 @@ package com.system.enumeration;
 /**
  * Created by dev.yungiggs on 2016. 10. 22..
  */
-public enum BrowerEnum {
+public enum BrowserEnum {
     IE("IE"),
     FIREFOX("Firefox"),
     SAFARI("Safari"),
@@ -12,14 +12,14 @@ public enum BrowerEnum {
 
     private String value;
 
-    BrowerEnum(String key){
+    BrowserEnum(String key){
         value=key;
     }
     public String getValue() {
         return value;
     }
-    public static BrowerEnum getEnumByValue(String value){
-        for (BrowerEnum item:BrowerEnum.values()){
+    public static BrowserEnum getEnumByValue(String value){
+        for (BrowserEnum item: BrowserEnum.values()){
             if(item.value.equals(value)){
                 return item;
             }
